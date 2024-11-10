@@ -11,7 +11,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'pomodoro';
   duration = 25;
-  tasks = [];
+  tasks = ['task 1', 'task 2'];
 
   onClick() {
     console.log("click");
