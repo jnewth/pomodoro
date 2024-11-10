@@ -10,4 +10,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'pomodoro';
+  duration = 25;
+  tasks = [];
+
+  onClick() {
+    console.log("click");
+  }
 }
