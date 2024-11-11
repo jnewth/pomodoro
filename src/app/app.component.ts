@@ -12,7 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'pomodoro';
   duration = 25;
-  tasks = new Array(); // ['task 1', 'task 2'];
+  tasks = new Array();
   currentItem = '';
 
   onClick() {
@@ -21,7 +21,7 @@ export class AppComponent {
 
   addItem() {
     if (this.currentItem !== '') {
-      this.tasks.push(this.currentItem);
+      this.tasks.unshift(this.currentItem);
       this.currentItem = '';
     }
   }

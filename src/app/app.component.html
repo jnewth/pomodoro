@@ -12,8 +12,8 @@
     <h1 class="text-center">{{title}}</h1>
     <div class="row align-items-center">
       <div class="col-md-6">
-        <input  id="intputText" type="text" [(ngModel)]="currentItem"  class="form-control"  placeholder="Add a new task" />
-        <!-- <ul id="todoList" class="list-group"></ul> -->
+        <input id="intputText" type="text" (keyup.enter)="addItem()" [(ngModel)]="currentItem" class="form-control"
+          placeholder="Add a new task" />
       </div>
       <div class="col-md-6">
         <button id="addTodo" (click)="addItem()" class="btn btn-primary">Add</button>
