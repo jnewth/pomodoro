@@ -12,24 +12,21 @@
     <h1 class="text-center">{{title}}</h1>
     <div class="row align-items-center">
       <div class="col-md-6">
-        <!-- <h4>To-Do List</h4> -->
-        <input type="text" id="todoInput" class="form-control" placeholder="Add a new task">
-        <ul id="todoList" class="list-group"></ul>
+        <input  id="intputText" type="text" [(ngModel)]="currentItem"  class="form-control"  placeholder="Add a new task" />
+        <!-- <ul id="todoList" class="list-group"></ul> -->
       </div>
       <div class="col-md-6">
-        <button id="addTodo" (click)="onClick()" class="btn btn-primary">Add</button>
+        <button id="addTodo" (click)="addItem()" class="btn btn-primary">Add</button>
       </div>
     </div>
-  </div>
 
-  <div class="container">
-    @for(item of tasks; track item) {
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <p>{{item}}</p>
-      </div>
+    <div class="col-md-6">
+      <ul class="list-group">
+        @for(item of tasks; track item) {
+        <li class="list-group-item">{{item}}</li>
+        }
+      </ul>
     </div>
-    }
   </div>
 </body>
 
