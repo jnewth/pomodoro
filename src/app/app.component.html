@@ -4,29 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua's Pomodoro</title>
+  <title>PomoDo</title>
 </head>
 
 <body>
   <div class="container">
     <h1 class="text-center">{{title}}</h1>
-    <div class="row align-items-center">
-      <div class="col-md-6">
+    <div class="row align-items-centers">
+      <div class="col-md-6 align-items-centers">
         <input id="intputText" type="text" (keyup.enter)="addItem()" [(ngModel)]="currentItem" class="form-control"
           placeholder="Add a new task" />
       </div>
-      <div class="col-md-6">
+      <!-- I dont really need or use the button here -->
+      <!-- <div class="col-md-1 text-center">
         <button id="addTodo" (click)="addItem()" class="btn btn-primary">Add</button>
+      </div> -->
+    </div>
+    <ul class="list-group mt-3">
+      @for(item of tasks; track item) {
+      <div class="row">
+        <div class="col-md-6">
+          <li class="list-group-item align-middle">{{item.desc}}
+        </div>
+        <div class="col-md-1 text-center align-middle align-bottom">
+          <button id="delete" (click)="deleteItem(item)" class="btn btn-close"></button>
+        </div>
+        <div class="col-md-1 text-center align-middle align-bottom">
+          <button id="start" (click)="startItem(item)" class="btn btn-secondary">Start</button>
+        </div>
+      </div>
+      }
+    </ul>
+    @if(tasks.length > 0) {
+    <div class="text-center mt-3">
+      <div class="col-md-6">
+        <button id="clear" (click)="clearItems()" class="btn btn-primary">Clear</button>
       </div>
     </div>
-
-    <div class="col-md-6">
-      <ul class="list-group">
-        @for(item of tasks; track item) {
-        <li class="list-group-item">{{item}}</li>
-        }
-      </ul>
-    </div>
+    }
   </div>
 </body>
 

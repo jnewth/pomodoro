@@ -1,27 +1,14 @@
-# Pomodoro
+# PomoDo (Todo list with pomodoro)
+This is my first babysteps project in to the world of frontend development in general and Angular in particular.
+
+I am a longtime fan of the [pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) productivity technique and used it to force myself through thesis writing. I am also a big fan of [trello]I tend to use it as a todolist as well, so thought I might try to combine them.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+
+# hosting
+
+You can deploy a live version of Angular-based apps to github pages. I do this with `ng deploy --base-href=/pomodoro/`. You can see the app running live [here](https://jnewth.github.io/pomodoro/).
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
