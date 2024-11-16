@@ -9,12 +9,14 @@ const START_ID = 1;
 type Task = {
   desc: string;
   id: number;
+  pomodoroCount: number;
 }
 
 function CreateTask(desc: string, id: number): Task {
   return {
     desc: desc,
-    id: id
+    id: id,
+    pomodoroCount : 0
   };
 }
 
@@ -31,6 +33,8 @@ export class AppComponent {
   tasks = new Array<Task>(); //task is an id and a string value
   nextId = START_ID;
   currentItem = '';
+  taskInProgress?: Task; //might be nothing
+  timerInProgress: number = 0;
 
   ngAfterViewInit() {
     const tasks_string = window.localStorage.getItem(TASK_LIST);
@@ -53,13 +57,24 @@ export class AppComponent {
       window.localStorage.setItem(TASK_ID, JSON.stringify(this.nextId));
     }
   }
-  deleteItem(task:Task) {
+
+  startItem(task: Task) {
+    //behavior: pop from todo
+    //add to in progress
+    //stop should return to todo list
+    //pause should pause
+    //pause should become resume so only exit is cancel / (pause/resume) / complete
+    this.onClick();
+  }
+
+
+  deleteItem(task: Task) {
     let index = this.tasks.indexOf(task);
     this.tasks.splice(index, 1);
   }
 
   clearItems() {
-    this.tasks=[];
+    this.tasks = [];
     this.nextId = START_ID;
   }
 }
