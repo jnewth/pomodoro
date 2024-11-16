@@ -1,9 +1,9 @@
 # PomoDo (Todo list with pomodoro)
 This is my first babysteps project in to the world of frontend development in general and Angular in particular.
 
-I am a longtime fan of the [pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) productivity technique and used it to force myself through thesis writing. I am also a big fan of [trello]I tend to use it as a todolist as well, so thought I might try to combine them.
+I am a longtime fan of the [pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) productivity technique and used it to force myself through thesis writing. I also make a lot of TODO lists so thought I might try to combine them.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11 and a hell of a lot of help, encouragement, and coaching from my bro Steven who is working on something far more [complex](https://stevenvictor.net/number-munchers/).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11 and a lot of help, encouragement, and coaching from my bro Steven who is working on something far more [complex](https://stevenvictor.net/number-munchers/).
 
 # hosting
 
